@@ -1,4 +1,4 @@
-const Employee = require("../models/Employee.js")
+const Employee = require("./models/Employee.js")
 
 async function homePage(req, res) {
     try {
