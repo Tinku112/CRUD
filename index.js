@@ -8,7 +8,7 @@ const app = express()
 app.set("view engine", "hbs")
 
 
-require("../CRUD/db-connect")
+require("../db-connect")
 
 hbs.registerPartials(path.join(__dirname+"/views/partials"))
 
