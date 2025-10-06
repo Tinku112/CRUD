@@ -1,6 +1,6 @@
 
 const EmployeeRouter = require("express").Router()
-const encoder = require("../middleware/auth")
+const encoder = require("./middleware/auth")
 
 const {
     homePage,
@@ -9,7 +9,7 @@ const {
     deletePage,
     editPage,
     updatePage,
-} = require("../controllers/EmployeeControllers")
+} = require("./controllers/EmployeeControllers")
 
 EmployeeRouter.get("/", homePage)
 EmployeeRouter.get("/add", addPage)
