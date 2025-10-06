@@ -1,0 +1,88 @@
+{{>header}}
+<title>CRUD - Create Record</title>
+{{>navbar}}
+
+<div class="container-fluid my-3">
+    <h5 class="bg-dark text-light text-center p-2">Create Employee Data</h5>
+    <form action="/add" method="post">
+        <div class="row mb-3 align-items-center">
+            <label class="col-md-2 col-form-label text-end">Name*</label>
+            <div class="col-md-6">
+                <input type="text" name="name" placeholder="Enter your Name" value="{{data.name}}"
+                    class="form-control {{#if errorMessage.name}}border-danger {{else}}border-dark {{/if}} ">
+                {{#if errorMessage}}
+                <p>{{errorMessage.name}}</p>
+                {{/if}}
+            </div>
+        </div>
+
+        <div class="row mb-3 align-items-center">
+            <label class="col-md-2 col-form-label text-end">Email*</label>
+            <div class="col-md-6">
+                <input type="text" name="email" placeholder="Enter your E-mail Address"
+                    class="form-control {{#if errorMessage.email}}border-danger {{else}}border-dark {{/if}}">
+                {{#if errorMessage}}
+                <p>{{errorMessage.email}}</p>
+                {{/if}}
+            </div>
+        </div>
+
+        <div class="row mb-3 align-items-center">
+            <label class="col-md-2 col-form-label text-end">Phone*</label>
+            <div class="col-md-6">
+                <input type="text" name="phone" placeholder="Enter your Phone Number"
+                    class="form-control {{#if errorMessage.phone}}border-danger {{else}}border-dark {{/if}}">
+                {{#if errorMessage}}
+                <p>{{errorMessage.phone}}</p>
+                {{/if}}
+            </div>
+        </div>
+
+        <div class="row mb-3 align-items-center">
+            <label class="col-md-2 col-form-label text-end">Designation*</label>
+            <div class="col-md-6">
+                <input type="text" name="designation" placeholder="Enter Designation"
+                    class="form-control {{#if errorMessage.phone}}border-danger {{else}}border-dark {{/if}}">
+                {{#if errorMessage}}
+                <p>{{errorMessage.designation}}</p>
+                {{/if}}
+            </div>
+        </div>
+
+        <div class="row mb-3 align-items-center">
+            <label class="col-md-2 col-form-label text-end">Salary*</label>
+            <div class="col-md-6">
+                <input type="text" name="salary" placeholder="Enter Salary"
+                    class="form-control {{#if errorMessage.salary}}border-danger {{else}}border-dark {{/if}}">
+                {{#if errorMessage}}
+                <p>{{errorMessage.salary}}</p>
+                {{/if}}
+            </div>
+        </div>
+
+        <div class="row mb-3 align-items-center">
+            <label class="col-md-2 col-form-label text-end">City*</label>
+            <div class="col-md-6">
+                <input type="text" name="city" placeholder="Enter your City" class="form-control">
+            </div>
+        </div>
+
+        <div class="row mb-3 align-items-center">
+            <label class="col-md-2 col-form-label text-end">State*</label>
+            <div class="col-md-6">
+                <input type="text" name="state" placeholder="Enter your State" class="form-control">
+
+            </div>
+        </div>
+
+        <div class="row mb-3">
+            <div class="col-md-8 text-center">
+                <button type="submit" class="btn border-dark border-5 px-5">Submit</button>
+            </div>
+        </div>
+    </form>
+</div>
+
+
+
+{{>footer}}

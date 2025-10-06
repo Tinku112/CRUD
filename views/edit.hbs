@@ -1,0 +1,79 @@
+{{>header}}
+<title>CRUD - Edit Record</title>
+{{>navbar}}
+
+<div class="container-fluid my-3">
+
+    <h5 class="bg-dark text-light text-center p-2">Create Employee Data</h5>
+
+    <form action="/update/{{data._id}}" method="post">
+        <div class="row">
+            <div class="col-12 mb-3">
+                <label>Name*</label>
+                <input type="text" name="name" placeholder="Enter your name" value = "{{data.name}}"
+                    class="form-control {{#if errorMessage.name}}border-danger {{else}}border-dark{{/if}}">
+                {{#if errorMessage.name}}
+                <p class="text-danger">{{errorMessage.name}}</p>
+                {{/if}}
+            </div>
+
+            <div class="col-md-6 mb-3">
+                <label>Email</label>
+                <input type="text" name="email" placeholder="Enter your E-mail Address" value = "{{data.email}}"
+                    class="form-control {{#if errorMessage.email}}border-danger{{else}}border-dark{{/if}}">
+                {{#if errorMessage.email}}
+                <p class="text-danger">{{errorMessage.email}}</p>
+                {{/if}}
+            </div>
+
+            <div class="col-md-6 mb-3">
+                <label>Phone*</label>
+                <input type="Number" name="phone" placeholder="Enter Your Phone Number" value = "{{data.phone}}"
+                    class="form-control {{#if errorMessage.phone}}border-danger {{else}}border-dark {{/if}}">
+                {{#if errorMessage.phone}}
+                <p class="text-danger">{{errorMessage.phone}}</p>
+                {{/if}}
+            </div>
+
+
+            <div class="col-md-6 mb-3">
+                <label>Designation*</label>
+                <input type="text" name="designation" placeholder="Designation" value = "{{data.designation}}"
+                    class="form-control {{#if errorMessage.designation}}border-danger {{else}}border-dark {{/if}}">
+                {{#if errorMessage.designation}}
+                <p class="text-danger">{{errorMessage.designation}}</p>
+                {{/if}}
+            </div>
+
+            <div class="col-md-6 mb-3">
+                <label>Salary*</label>
+                <input type="text" name="salary" placeholder="Enter your Salary" value = "{{data.salary}}"
+                    class="form-control {{#if errorMessage.salary}}border-danger {{else}}border-dark {{/if}}">
+                {{#if errorMessage.salary}}
+                <p class="text-danger">{{errorMessage.salary}}</p>
+                {{/if}}
+            </div>
+
+            <div class = "col-md-6 mb-3">
+                <label>City*</label>
+                <input type="text" name = "city" placeholder="City Name" value = "{{data.city}}"
+                class = "form-control border-dark">
+            </div>
+
+            <div class = "col-md-6 mb-3">
+                <label>State*</label>
+                <input type="text" name = "state" placeholder="State Name" value = "{{data.state}}"
+                class = "form-control border-dark">
+            </div>
+
+            <div class = "col-md-12 mb-3 text-center">
+                <button type="submit" class="btn btn-white border-dark w-50 border-3 ">Submit</button>
+            </div>
+
+        </div>
+    </form>
+</div>
+
+
+
+{{>footer}}
